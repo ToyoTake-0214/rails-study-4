@@ -8,6 +8,6 @@ class BookmarksController < ApplicationController
   def destroy
     board = current_user.bookmarks.find(params[:id]).board
     current_user.unbookmark(board)
-    redirect_back fallback_location: boards_path, success: t(".success") 
+    redirect_back fallback_location: boards_path, success: t(".success"), status: :see_other 
   end
 end
