@@ -16,6 +16,8 @@
                 <i class="bi bi-trash-fill"></i>
               <% end %>
             </div>
+          <% else %>
+            <%= render 'bookmark_buttons', { board: board } %>
           <% end %>
         </div>
         <ul class="list-inline">
