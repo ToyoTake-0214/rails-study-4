@@ -9,6 +9,21 @@ class User < ApplicationRecord
 
   has_many :boards, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmark_boards, through: :bookmarks, source: :board
+
+  def bookmark(board)
+    bookmark_boards << board
+  end
+
+  def unbookmark(board)
+    bookmark_boards.destroy(board)
+  end
+
+  def bookmark?(board)
+    bookmark_boards.include?(board)
+  end
+
 
   def own?(object)
     id == object&.user_id
