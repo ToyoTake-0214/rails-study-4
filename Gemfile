@@ -48,6 +48,8 @@ gem 'rails-i18n', '~> 7.0.0'
 
 gem 'draper'
 
+gem 'turbo-rails','1.1.1'
+
 gem 'carrierwave', '~> 2.0'
 
 group :development, :test do
