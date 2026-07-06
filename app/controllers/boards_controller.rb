@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
   def index
     @q = Board.ransack(params[:q])
-    @boards = @q.includes(:user).page(params[:page])
+    @boards = @q.result.includes(:user).page(params[:page])
   end
 
   def new
