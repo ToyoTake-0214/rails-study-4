@@ -10,6 +10,7 @@ ja:
   defaults:
     create: 作成
     post: 投稿
+    edit: 編集
     search_word: 検索ワード
     delete_confirm: 削除しますか？
     flash_message:
@@ -62,3 +63,11 @@ ja:
       success: ブックマークしました
     destroy:
       success: ブックマークを外しました
+  profiles: 
+    show:
+      title: プロフィール
+    edit:
+      title: プロフィール編集
+    update:
+      success: ユーザーを更新しました
+      failure: ユーザーを更新出来ませんでした
