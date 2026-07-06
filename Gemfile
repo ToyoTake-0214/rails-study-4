@@ -44,6 +44,9 @@ gem "dartsass-rails", "~> 0.4.0"
 
 gem 'bcrypt'
 
+gem 'kaminari', '1.2.2'
+gem 'bootstrap5-kaminari-views'
+
 gem 'rails-i18n', '~> 7.0.0'
 
 gem 'draper'

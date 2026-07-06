@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   def index
-    @boards = Board.includes(:user)
+    @boards = Board.includes(:user).page(params[:page])
   end
 
   def new
@@ -44,7 +44,7 @@ class BoardsController < ApplicationController
   end
 
   def bookmarks
-    @bookmark_boards = current_user.bookmark_boards.includes(:user)
+    @bookmark_boards = current_user.bookmark_boards.includes(:user).page(params[:page])
   end
 
   private
