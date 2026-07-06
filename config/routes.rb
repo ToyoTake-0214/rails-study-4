@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "static_pages#top"
-  resources :users, only: %i[new create]
+  resources :users, only: %i[new create] 
+  resource :profile, only: %i[show edit update]
   resources :boards, only: %i[index new create show edit update destroy] do
     resources :comments, only: %i[create edit destroy], shallow: true
     collection do
