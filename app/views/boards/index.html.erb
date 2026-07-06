@@ -16,6 +16,7 @@
       <div class="row">
         <% if @boards.present? %>
           <%= render @boards %>
+          <%= paginate @boards, theme: 'bootstrap-5' %>
         <% else %>
           <div class="mb-3">掲示板がありません</div>
         <% end %>
