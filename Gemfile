@@ -59,6 +59,7 @@ gem 'ransack', '3.2.1'
 
 gem 'letter_opener_web', '2.0.0'
 
+gem 'config', '4.0.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
