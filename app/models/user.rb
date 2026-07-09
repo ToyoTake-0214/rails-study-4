@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }
   validates :email, presence: true, uniqueness: true
+  validates :reset_password_token, uniqueness: true, allow_nil: true
 
   has_many :boards, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -28,5 +29,14 @@ class User < ApplicationRecord
 
   def own?(object)
     id == object&.user_id
+  end
+  
+  def generate_reset_password_token!
+    reset_password_token = SecureRandom.hex(16)
+    while User.exists?(reset_password_token:)
+      reset_password_token = SecureRandom.hex(16)
+    end
+    self.reset_password_token = reset_password_token
+    update!(reset_password_token_expires_at: 1.hour.from_now)
   end
 end

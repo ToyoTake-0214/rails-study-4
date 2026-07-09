@@ -13,6 +13,7 @@ ja:
     edit: 編集
     search_word: 検索ワード
     delete_confirm: 削除しますか？
+    password_reset: パスワードリセット
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
@@ -71,3 +72,15 @@ ja:
     update:
       success: ユーザーを更新しました
       failure: ユーザーを更新出来ませんでした
+  password_resets:
+    new:
+      title: パスワードリセット申請
+      submit: 送信
+    edit:
+      title: パスワードリセット
+      submit: 更新
+    create:
+      success: パスワードリセット手順を送信しました
+    update:
+      success: パスワードを変更しました
+  
