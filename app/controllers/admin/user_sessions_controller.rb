@@ -3,7 +3,8 @@ class Admin::UserSessionsController < Admin::BaseController
   skip_before_action :check_admin, only: %i[new create]
   layout 'layouts/admin_login'
 
-  def new; end
+  def new
+  end
 
   def create
     @user = User.find_by(email: params[:email])&.authenticate(params[:password])

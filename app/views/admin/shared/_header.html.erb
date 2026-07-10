@@ -13,7 +13,11 @@
   </div>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <%= link_to t('header.logout'), admin_logout_path, data: { turbo_method: :delete }, local: true, class: 'nav-link px-3' %>
+    <%= button_to t('header.logout'),
+              admin_logout_path,
+              method: :delete,
+              form: { data: { turbo: false } },
+              class: 'nav-link px-3' %>
     </div>
   </div>
 </header>
