@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_secure_password
   has_secure_password :recovery_password, validations: false
 
+  enum role: { general: 0, admin: 1 }
+
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:password_digest] }
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }

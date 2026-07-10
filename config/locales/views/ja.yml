@@ -21,6 +21,7 @@ ja:
       not_updated: "%{item}を更新出来ませんでした"
       deleted: "%{item}を削除しました"
       require_login: ログインしてください
+      not_authorized: 権限がありません
   header:
     login: ログイン
     logout: ログアウト
@@ -83,4 +84,17 @@ ja:
       success: パスワードリセット手順を送信しました
     update:
       success: パスワードを変更しました
-  
+  admin:
+    user_sessions:
+      new:
+        title: ログイン
+        login: ログイン
+      create:
+        success: ログインしました
+        failure: ログインに失敗しました
+      destroy:
+        success: ログアウトしました
+    dashboards:
+      index:
+        title: ダッシュボード
+    

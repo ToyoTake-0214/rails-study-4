@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def page_title(title = '')
-    base_title = 'RUNTEQ BOARD APP'
+  def page_title(title = '', admin: false)
+    base_title = admin ? 'RUNTEQ BOARD APP(管理画面)': 'RUNTEQ BOARD APP'
     title.present? ? "#{title} | #{base_title}" : base_title
   end
 end
