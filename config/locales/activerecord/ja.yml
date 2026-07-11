@@ -6,6 +6,7 @@ ja:
       comment: コメント
     attributes:
       user:
+        role: 権限
         email: メールアドレス
         last_name: 姓
         first_name: 名
@@ -14,8 +15,18 @@ ja:
         password: パスワード
         password_confirmation: パスワード確認
       board:
+        user: 作成者
         title: タイトル
         body: 本文
         board_image: サムネイル
       comment:
         body: コメント
+  attributes:
+    id: ID
+    created_at: 作成日時
+    updated_at: 更新日時
+  enums:
+    user:
+      role:
+        general: 一般
+        admin: 管理者

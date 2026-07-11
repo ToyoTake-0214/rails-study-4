@@ -35,6 +35,8 @@ gem "bootsnap", require: false
 
 gem "jsbundling-rails"
 
+gem 'enum_help','0.0.19'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 gem "dartsass-rails", "~> 0.4.0"
